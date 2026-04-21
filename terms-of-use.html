@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use | WaterSonic</title>
+  <style>
+    :root {
+      --bg: #f5fbff;
+      --bg2: #eef8ff;
+      --card: rgba(255, 255, 255, 0.80);
+      --card-border: rgba(15, 23, 42, 0.08);
+      --text: #0f172a;
+      --muted: #475569;
+      --muted2: #64748b;
+      --primary: #0ea5e9;
+      --primary2: #2563eb;
+      --accent: #f97316;
+      --shadow: 0 20px 60px rgba(15, 23, 42, 0.10);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(14, 165, 233, 0.20), transparent 24%),
+        radial-gradient(circle at top right, rgba(249, 115, 22, 0.12), transparent 24%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+      line-height: 1.75;
+    }
+
+    .hero { padding: 72px 20px 30px; }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 20px 72px; }
+    .hero-card {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 34px 28px;
+      border: 1px solid var(--card-border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72));
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -80px -100px auto;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(14,165,233,0.24), rgba(14,165,233,0));
+      pointer-events: none;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(14, 165, 233, 0.10);
+      color: #0369a1;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .eyebrow-dot {
+      width: 8px; height: 8px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--primary2));
+      box-shadow: 0 0 0 6px rgba(14,165,233,0.10);
+    }
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+    .subtitle { margin: 0; color: var(--muted); font-size: 16px; max-width: 820px; }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    .meta {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+    .meta label {
+      display: block; color: var(--muted2); font-size: 12px; margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700;
+    }
+    .meta div { font-size: 15px; font-weight: 700; color: var(--text); word-break: break-word; }
+    .section {
+      margin-top: 24px;
+      padding: 24px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .section h2 { margin: 0 0 14px; font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; }
+    p { margin: 10px 0; color: var(--text); }
+    ul { margin: 10px 0 10px 22px; }
+    li { margin: 8px 0; }
+    .callout {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(14, 165, 233, 0.18);
+      background: linear-gradient(180deg, rgba(14, 165, 233, 0.08), rgba(255,255,255,0.65));
+    }
+    .callout strong { color: #0369a1; }
+    a { color: var(--primary2); text-decoration: none; font-weight: 700; }
+    a:hover { text-decoration: underline; }
+    .footer {
+      margin-top: 24px;
+      padding: 20px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(15,23,42,0.10), transparent);
+      margin: 20px 0;
+    }
+    .small { font-size: 13px; color: var(--muted2); }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; justify-content: center; }
+    .pill {
+      padding: 8px 12px; border-radius: 999px; background: rgba(15,23,42,0.05);
+      font-size: 13px; color: var(--muted); border: 1px solid rgba(15,23,42,0.05);
+    }
+    @media (max-width: 820px) {
+      .hero-card, .section { padding: 20px 16px; border-radius: 22px; }
+      .meta-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-card">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Terms of Use</div>
+      <h1>WaterSonic Terms of Use</h1>
+      <p class="subtitle">
+        Effective Date: December 20, 2025. These Terms govern your access to and use of WaterSonic, a focused audio utility for water ejection, sleep sounds, and environmental noise tools.
+      </p>
+      <div class="meta-grid">
+        <div class="meta">
+          <label>Effective Date</label>
+          <div>2025.12.20</div>
+        </div>
+        <div class="meta">
+          <label>Support Email</label>
+          <div><a href="mailto:sakasholy111@gmail.com">sakasholy111@gmail.com</a></div>
+        </div>
+        <div class="meta">
+          <label>Distribution</label>
+          <div>iOS App / Web Legal Page</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>1. Acceptance of These Terms</h2>
+      <p>
+        By downloading, installing, accessing, or using WaterSonic, you agree to be bound by these Terms of Use and any applicable laws and regulations.
+        If you do not agree, do not use the app.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>2. Service Overview</h2>
+      <p>WaterSonic is a utility app designed to provide the following features:</p>
+      <ul>
+        <li><strong>Water Eject</strong> — speaker water ejection playback modes and related audio output patterns.</li>
+        <li><strong>Sleep Modes</strong> — curated sound modes and timer-based playback for relaxation and sleep support.</li>
+        <li><strong>Noise Meter</strong> — on-device environmental noise reference and relative sound level display.</li>
+      </ul>
+      <p>
+        WaterSonic is intended for general consumer use and convenience. It is not a medical device and it is not a professional calibrated sound meter.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>3. Eligibility and Account Access</h2>
+      <p>
+        WaterSonic does not require user account creation or account login to use its core features.
+        You may use the app without registering an account.
+      </p>
+      <p>
+        If you choose to contact support by email or use a platform-based purchase or restore flow, those actions may involve the relevant service provider’s systems and policies.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>4. Permitted Use</h2>
+      <p>You may use WaterSonic for lawful personal use only. You agree not to:</p>
+      <ul>
+        <li>use the app in any manner that violates applicable law or third-party rights;</li>
+        <li>attempt to reverse engineer, decompile, modify, or interfere with the app or its security controls;</li>
+        <li>use automated tools, bots, or scripts to disrupt service or extract content unlawfully;</li>
+        <li>misuse audio playback in a way that could damage devices, speakers, or hearing;</li>
+        <li>remove, alter, or obscure any legal notices, brand marks, or ownership information.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>5. Safety and Usage Notices</h2>
+      <p>
+        Water Eject and other playback tools should be used carefully and at reasonable volume levels.
+        You are responsible for using the app in a safe environment and for monitoring device output.
+      </p>
+      <ul>
+        <li>Do not rely on the app as a medical or emergency tool.</li>
+        <li>Do not use high-volume audio near children, sleeping persons, or sensitive environments without caution.</li>
+        <li>Do not operate the app while driving, cycling, or performing tasks requiring full attention.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>6. Purchases, Subscriptions, and Third-Party Services</h2>
+      <p>
+        Some features may be offered through Apple’s in-app purchase system or other platform-managed purchase flows.
+        Pricing, trial terms, renewals, cancellations, and refunds are governed by the applicable store policies.
+      </p>
+      <p>
+        WaterSonic may rely on third-party infrastructure for app distribution, purchase validation, and crash diagnostics.
+        Those services are governed by their own terms and privacy policies.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>7. Intellectual Property</h2>
+      <p>
+        The app, its design, source code, copywriting, icons, branding, and related materials are owned by Omniform Labs or its licensors and are protected by intellectual property laws.
+      </p>
+      <p>
+        No rights are granted to you except for a limited, revocable, non-exclusive license to use the app in accordance with these Terms.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>8. Disclaimer of Warranties</h2>
+      <p>
+        To the maximum extent permitted by applicable law, WaterSonic is provided on an "as is" and "as available" basis without warranties of any kind,
+        whether express, implied, statutory, or otherwise.
+      </p>
+      <p>
+        We do not guarantee uninterrupted operation, compatibility with every device, or that any feature will meet your specific expectations.
+      </p>
+      <div class="callout">
+        <strong>Important:</strong> This disclaimer does not limit any non-waivable consumer rights available under applicable law in jurisdictions such as California, Canada, Singapore, or Australia.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>9. Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by law, Omniform Labs and its affiliates will not be liable for indirect, incidental, special, consequential,
+        or punitive damages, or for loss of profits, data, goodwill, or business interruption arising from your use of or inability to use the app.
+      </p>
+      <p>
+        Where local law does not allow a limitation of liability, this section applies only to the extent permitted by that law.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>10. Indemnity</h2>
+      <p>
+        You agree to indemnify and hold harmless Omniform Labs, its affiliates, employees, contractors, and partners from claims or losses arising from your unlawful use of the app,
+        your breach of these Terms, or your violation of any third-party rights, to the extent permitted by law.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>11. Termination</h2>
+      <p>
+        We may suspend or terminate access to the app, in whole or in part, if we reasonably believe you have violated these Terms, applicable law, or any applicable store policy.
+      </p>
+      <p>
+        You may stop using the app at any time by uninstalling it.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>12. Governing Law and Dispute Resolution</h2>
+      <p>
+        These Terms are governed by the laws applicable to your use of the app and the jurisdiction of the relevant Omniform Labs entity,
+        subject to mandatory consumer protection laws in your location.
+      </p>
+      <p>
+        If you reside in California, Canada, Singapore, Australia, or another jurisdiction with mandatory consumer rights,
+        nothing in these Terms is intended to exclude or limit rights that cannot legally be waived.
+      </p>
+      <p>
+        Before filing a claim, the parties should attempt in good faith to resolve disputes informally by contacting support.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>13. Contact</h2>
+      <p>Questions about these Terms can be sent to:</p>
+      <div class="pill-list">
+        <span class="pill"><a href="mailto:sakasholy111@gmail.com">sakasholy111@gmail.com</a></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
