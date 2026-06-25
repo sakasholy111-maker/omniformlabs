@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — CueFlow</title>
+  <meta name="description" content="CueFlow Support. Contact information, common teleprompter topics, Picture in Picture help, file import notes, and script management guidance." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://sakasholy111-maker.github.io/omniformlabs/cueflow/support.html" />
+  <style>
+    :root { --ink: #1a1a1a; --muted: #4a5568; --rule: #e2e8f0; --brand: #4f46e5; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: #ffffff; color: var(--ink); }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+    a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+    .doc { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+    h1 { margin: 0 0 4px; font-size: 32px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+    .meta { margin: 0 0 48px; font-size: 14px; color: var(--muted); }
+    h2 { margin: 48px 0 12px; font-size: 20px; font-weight: 600; line-height: 1.3; letter-spacing: -0.005em; }
+    h2 .num { color: var(--brand); margin-right: 6px; }
+    h3 { margin: 24px 0 8px; font-size: 16px; font-weight: 600; }
+    p { margin: 12px 0; }
+    ul, ol { margin: 12px 0; padding-left: 22px; }
+    li { margin: 6px 0; }
+    .note { margin: 18px 0; padding: 14px 16px; border: 1px solid var(--ink); background: #ffffff; }
+    .contact-line { margin: 14px 0; padding: 14px 16px; border: 1px solid var(--rule); background: #ffffff; font-size: 16px; }
+    .contact-line strong { color: var(--ink); }
+    .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--brand); }
+    @media (max-width: 600px) { .doc { padding: 32px 18px 56px; } h1 { font-size: 26px; } h2 { font-size: 18px; } }
+  </style>
+</head>
+<body>
+  <main class="doc">
+    <h1>Support</h1>
+    <p class="meta">Last updated: June 25, 2026 · Provided by Omniform Labs.</p>
+
+    <h2 id="s1"><span class="num">1.</span>About</h2>
+    <p>
+      CueFlow is built and supported by Omniform Labs. This page is the canonical entry point for help with the application: how to reach us, what to include in a request, and common topics around scripts, imports, teleprompter settings, and floating captions.
+    </p>
+    <p>
+      We aim to respond within <strong>three business days</strong>. Most requests are answered the same day or the next business day.
+    </p>
+
+    <h2 id="s2"><span class="num">2.</span>Contact</h2>
+    <div class="contact-line">
+      <strong>Email:</strong> <a href="mailto:sakasholy111@gmail.com">sakasholy111@gmail.com</a>
+    </div>
+    <p>
+      For privacy and data requests, write <em>Privacy Request</em> in the subject line so it is routed correctly. For everything else, a brief plain-text subject is fine.
+    </p>
+
+    <h2 id="s3"><span class="num">3.</span>What to Include When Contacting Support</h2>
+    <p>
+      Including these details in the first message lets us answer in one round trip instead of several:
+    </p>
+    <ul>
+      <li><strong>Device model</strong> — for example "iPhone 16 Pro Max" or "iPad Air".</li>
+      <li><strong>iOS or iPadOS version</strong> — found under <em>Settings &rarr; General &rarr; About &rarr; Software Version</em>.</li>
+      <li><strong>CueFlow version</strong> — shown in the application settings or App Store listing.</li>
+      <li><strong>Feature in use</strong> — Scripts, Prompter, Picture in Picture, import, settings, or legal/support.</li>
+      <li><strong>What happened</strong> — a short description of the behavior, plus what you expected to happen.</li>
+      <li><strong>Steps to reproduce</strong> — when possible, a short sequence we can follow on our end.</li>
+    </ul>
+    <p>
+      Please avoid sending private scripts unless you want us to review that text as part of your support request.
+    </p>
+
+    <h2 id="s4"><span class="num">4.</span>Common Topics</h2>
+
+    <h3>Floating Captions Do Not Start</h3>
+    <p>
+      CueFlow uses Picture in Picture to display floating captions. PiP availability depends on iOS, device support, system settings, and the current app environment. If floating captions do not start:
+    </p>
+    <ul>
+      <li>test on a real iPhone that supports Picture in Picture;</li>
+      <li>avoid relying on Simulator for final PiP verification;</li>
+      <li>open CueFlow in full screen, select a script, then tap <em>Start Floating Captions</em>;</li>
+      <li>make sure Picture in Picture has not been disabled in system settings;</li>
+      <li>return to CueFlow and try again if another app has interrupted playback.</li>
+    </ul>
+
+    <h3>Imported Document Has No Readable Text</h3>
+    <p>
+      CueFlow imports readable text from TXT, PDF, DOCX, RTF, and ODT files you select. Some PDFs are scans or images without embedded text, and some documents may contain formatting without extractable text. If import does not create a useful script, try copying the text from the original document or using a TXT file.
+    </p>
+
+    <h3>Managing Scripts</h3>
+    <p>
+      Scripts are managed from the Scripts tab. Tap a row to edit, use the play button to open the script in Prompter, and use the delete button to remove a script after confirmation. Deleted scripts cannot be restored by CueFlow.
+    </p>
+
+    <h3>Adjusting Speed, Font, and Opacity</h3>
+    <p>
+      Open Prompter to adjust speed, font size, line gap, opacity, and mirror mode directly from the controls. Changes apply immediately in the preview and are used when floating captions start.
+    </p>
+
+    <h3>Using CueFlow With Camera or Video Apps</h3>
+    <p>
+      Start floating captions in CueFlow first, then switch to the camera, meeting, streaming, or video app you want to use. The other app controls video capture, publishing, upload, and platform rules. CueFlow only provides the teleprompter overlay.
+    </p>
+
+    <h3>Text Looks Too Large or Too Small</h3>
+    <p>
+      Use Font Size and Line Gap in Prompter Settings. For close-to-camera talking videos, start with a moderate font size and slower speed, then adjust until the current line is readable without large eye movement.
+    </p>
+
+    <h3>Subscriptions and Restore Purchases</h3>
+    <p>
+      CueFlow requires an active subscription to use app features. Available plans include weekly, monthly, semiannual, and annual subscriptions. The weekly plan includes a 3-day free trial when offered in the App Store purchase sheet. Use Settings &rarr; Restore to restore a previous purchase made with the same Apple ID.
+    </p>
+
+    <h2 id="s5"><span class="num">5.</span>Privacy and Data</h2>
+    <p>
+      CueFlow does not require an account. Scripts are stored locally on device. Imported TXT, PDF, DOCX, RTF, and ODT files are read locally after you select them. Floating captions are rendered locally for Picture in Picture. CueFlow does not upload your script text to Omniform Labs servers.
+    </p>
+    <div class="note">
+      <strong>Practical note.</strong> Any video or screen content you create in another app is controlled by that app and by iOS. Review the privacy and video capture rules of the app you use for capturing or publishing.
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Omniform Labs · <a href="mailto:sakasholy111@gmail.com">sakasholy111@gmail.com</a></span>
+      <span>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        &nbsp;·&nbsp;
+        <a href="terms-of-use.html">Terms of Use</a>
+      </span>
+    </footer>
+  </main>
+</body>
+</html>
