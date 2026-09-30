@@ -36,7 +36,7 @@
 <body>
   <main class="doc">
     <h1>Support</h1>
-    <p class="meta">Last updated: June 25, 2026 · Provided by Omniform Labs.</p>
+    <p class="meta">Last updated: September 30, 2026 · Provided by Omniform Labs.</p>
 
     <h2 id="s1"><span class="num">1.</span>About</h2>
     <p>
@@ -79,10 +79,16 @@
     <ul>
       <li>test on a real iPhone that supports Picture in Picture;</li>
       <li>avoid relying on Simulator for final PiP verification;</li>
-      <li>open CueFlow in full screen, select a script, then tap <em>Start Floating Captions</em>;</li>
+      <li>open CueFlow in full screen, select a script, then tap <em>Start</em>;</li>
+      <li>allow Microphone and Speech Recognition when prompted, or enable them in iOS Settings if they were previously denied;</li>
       <li>make sure Picture in Picture has not been disabled in system settings;</li>
       <li>return to CueFlow and try again if another app has interrupted playback.</li>
     </ul>
+
+    <h3>Microphone or Speech Recognition Prompt</h3>
+    <p>
+      CueFlow uses the microphone and Apple speech recognition to follow your English reading and to dictate text into the editor. These permissions are requested when you tap Start or use voice input. You can decline them and still create, import, and preview scripts. CueFlow does not upload microphone audio to Omniform Labs servers.
+    </p>
 
     <h3>Imported Document Has No Readable Text</h3>
     <p>
@@ -94,9 +100,9 @@
       Scripts are managed from the Scripts tab. Tap a row to edit, use the play button to open the script in Prompter, and use the delete button to remove a script after confirmation. Deleted scripts cannot be restored by CueFlow.
     </p>
 
-    <h3>Adjusting Speed, Font, and Opacity</h3>
+    <h3>Themes and Mirror</h3>
     <p>
-      Open Prompter to adjust speed, font size, line gap, opacity, and mirror mode directly from the controls. Changes apply immediately in the preview and are used when floating captions start.
+      Open Prompter to choose Standard, Low Glare, or Soft caption themes and to toggle mirror mode. Theme and mirror choices apply in the live preview and in floating captions.
     </p>
 
     <h3>Using CueFlow With Camera or Video Apps</h3>
@@ -104,19 +110,19 @@
       Start floating captions in CueFlow first, then switch to the camera, meeting, streaming, or video app you want to use. The other app controls video capture, publishing, upload, and platform rules. CueFlow only provides the teleprompter overlay.
     </p>
 
-    <h3>Text Looks Too Large or Too Small</h3>
+    <h3>Voice Follow Feels Off</h3>
     <p>
-      Use Font Size and Line Gap in Prompter Settings. For close-to-camera talking videos, start with a moderate font size and slower speed, then adjust until the current line is readable without large eye movement.
+      Speak the selected English script in a reasonably quiet space and keep the current word near the highlighted line. CueFlow can relock if you skip ahead or go back. If highlighting does not start, confirm Microphone and Speech Recognition are allowed for CueFlow.
     </p>
 
     <h3>Subscriptions and Restore Purchases</h3>
     <p>
-      CueFlow requires an active subscription to use app features. Available plans include weekly, monthly, semiannual, and annual subscriptions. The weekly plan includes a 3-day free trial when offered in the App Store purchase sheet. Use Settings &rarr; Restore to restore a previous purchase made with the same Apple ID.
+      Creating, importing, and previewing scripts is available without a subscription. Picture in Picture floating captions include a limited free daily use. Additional Picture in Picture use requires an active subscription. Available plans include weekly, monthly, semiannual, and annual subscriptions. The weekly plan includes a 3-day free trial when offered in the App Store purchase sheet. Use Settings &rarr; Restore to restore a previous purchase made with the same Apple ID.
     </p>
 
     <h2 id="s5"><span class="num">5.</span>Privacy and Data</h2>
     <p>
-      CueFlow does not require an account. Scripts are stored locally on device. Imported TXT, PDF, DOCX, RTF, and ODT files are read locally after you select them. Floating captions are rendered locally for Picture in Picture. CueFlow does not upload your script text to Omniform Labs servers.
+      CueFlow does not require an account. Scripts are stored locally on device. Imported TXT, PDF, DOCX, RTF, and ODT files are read locally after you select them. Microphone audio used for voice follow and dictation is processed through Apple speech APIs on device. Floating captions are rendered locally for Picture in Picture. CueFlow does not upload your script text or microphone audio to Omniform Labs servers. See the <a href="https://sakasholy111-maker.github.io/omniformlabs/cueflow/privacy-policy.html">Privacy Policy</a> for details.
     </p>
     <div class="note">
       <strong>Practical note.</strong> Any video or screen content you create in another app is controlled by that app and by iOS. Review the privacy and video capture rules of the app you use for capturing or publishing.

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — CueFlow</title>
-  <meta name="description" content="CueFlow Privacy Policy. How scripts, imported files, Picture in Picture captions, support messages, and local app data are handled." />
+  <meta name="description" content="CueFlow Privacy Policy. How scripts, microphone and speech recognition, Picture in Picture captions, tracking, support messages, and local app data are handled." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://sakasholy111-maker.github.io/omniformlabs/cueflow/privacy-policy.html" />
   <style>
@@ -47,7 +47,7 @@
 <body>
   <main class="doc">
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: June 25, 2026 · Provided by Omniform Labs.</p>
+    <p class="meta">Last updated: September 30, 2026 · Provided by Omniform Labs.</p>
 
     <div class="toc" aria-label="Table of contents">
       <h4>Contents</h4>
@@ -55,23 +55,24 @@
         <li><a href="#s1">Summary</a></li>
         <li><a href="#s2">Scripts and Local Storage</a></li>
         <li><a href="#s3">Imported Files</a></li>
-        <li><a href="#s4">Floating Captions</a></li>
-        <li><a href="#s5">Network Use</a></li>
-        <li><a href="#s6">Support Communications</a></li>
-        <li><a href="#s7">Tracking and Advertising</a></li>
-        <li><a href="#s8">App Store Privacy Label Mapping</a></li>
-        <li><a href="#s9">Children's Privacy</a></li>
-        <li><a href="#s10">Security</a></li>
-        <li><a href="#s11">Changes and Contact</a></li>
+        <li><a href="#s4">Microphone and Speech Recognition</a></li>
+        <li><a href="#s5">Floating Captions</a></li>
+        <li><a href="#s6">Network Use</a></li>
+        <li><a href="#s7">Support Communications</a></li>
+        <li><a href="#s8">Tracking and Advertising</a></li>
+        <li><a href="#s9">App Store Privacy Label Mapping</a></li>
+        <li><a href="#s10">Children's Privacy</a></li>
+        <li><a href="#s11">Security</a></li>
+        <li><a href="#s12">Changes and Contact</a></li>
       </ol>
     </div>
 
     <h2 id="s1"><span class="num">1.</span>Summary</h2>
     <p>
-      CueFlow is a teleprompter application that lets you create scripts, import readable text files, preview scrolling captions, and start floating captions with Picture in Picture. CueFlow does not require account registration. We do not sell personal information, we do not display advertising, and we do not use your data to track you across other apps or websites.
+      CueFlow is a teleprompter application that lets you create scripts, import readable text files, preview lyric-style captions, and start floating captions with Picture in Picture. When you tap Start or use voice dictation, CueFlow may use the microphone and speech recognition so captions can follow your English reading and so spoken words can be inserted into a script. CueFlow does not require account registration. We do not sell personal information, and we do not display advertising.
     </p>
     <p>
-      CueFlow is designed to keep your script workflow local. Your script text is stored on your device unless you choose to share it outside the app through iOS features or by contacting support.
+      CueFlow is designed to keep your script workflow local. Your script text is stored on your device unless you choose to share it outside the app through iOS features or by contacting support. CueFlow does not upload your script text or microphone audio to Omniform Labs servers.
     </p>
 
     <h2 id="s2"><span class="num">2.</span>Scripts and Local Storage</h2>
@@ -84,49 +85,76 @@
 
     <h2 id="s3"><span class="num">3.</span>Imported Files</h2>
     <p>
-      CueFlow can import readable text from user-selected TXT, PDF, DOCX, RTF, and ODT files. Import only happens after you choose a file through the system file picker. The selected file is read locally so CueFlow can create a script from readable text.
+      CueFlow can import readable text from user-selected TXT, PDF, DOCX, RTF, and ODT files, including UTF-16 plain text. Import only happens after you choose a file through the system file picker. The selected file is read locally so CueFlow can create a script from readable text.
     </p>
     <p>
       If a PDF, DOCX, RTF, or ODT file does not contain readable text, CueFlow may be unable to create a script from it. CueFlow does not transmit imported files to Omniform Labs servers for extraction or processing.
     </p>
 
-    <h2 id="s4"><span class="num">4.</span>Floating Captions</h2>
+    <h2 id="s4"><span class="num">4.</span>Microphone and Speech Recognition</h2>
     <p>
-      CueFlow uses Picture in Picture and local rendering to display floating captions. Caption frames are generated on your device from the script and settings you choose, such as speed, font size, line spacing, opacity, mirror mode, and current-line highlighting.
+      CueFlow requests <strong>Microphone</strong> and <strong>Speech Recognition</strong> permission when you tap Start for floating captions, or when you use voice input in the script editor. These permissions are optional. If you decline, you can still create, import, edit, and preview scripts. Voice-following captions and dictation will not run until you grant access.
+    </p>
+    <p>When granted, CueFlow uses these permissions only to:</p>
+    <ul>
+      <li>follow your English reading position and highlight the current words in the selected script;</li>
+      <li>convert spoken English into text that you can insert into a script in the editor.</li>
+    </ul>
+    <p>
+      Speech processing is performed through Apple speech APIs on your device. CueFlow does not record a lasting audio file of your session, does not store raw microphone audio in the script library, and does not upload microphone audio or speech transcripts to Omniform Labs servers. CueFlow does not use your voice to train advertising models or to identify you across other companies' apps.
     </p>
     <p>
-      Floating captions are not a camera capture service. CueFlow does not capture your camera, microphone, screen, or other applications. Any video you create in another app is controlled by that app and by iOS.
+      You can change or withdraw these permissions at any time in iOS Settings. If access was previously denied, CueFlow may open Settings so you can enable Microphone and Speech Recognition, then return and tap Start again.
+    </p>
+    <div class="note">
+      <strong>Not a recorder.</strong> CueFlow is not a camera, microphone, or screen-recording product. It does not capture other apps, and it does not publish audio or video. Any recording you make in Camera or another app is controlled by that app and by iOS.
+    </div>
+
+    <h2 id="s5"><span class="num">5.</span>Floating Captions</h2>
+    <p>
+      CueFlow uses Picture in Picture and local rendering to display floating captions. Caption frames are generated on your device from the selected script, theme, mirror setting, and voice-follow position.
+    </p>
+    <p>
+      Picture in Picture may use the system's audio session so the caption window can remain visible when you switch to another app. CueFlow does not play or publish media audio as a content service. Any video you create in another app is controlled by that app and by iOS.
     </p>
 
-    <h2 id="s5"><span class="num">5.</span>Network Use</h2>
+    <h2 id="s6"><span class="num">6.</span>Network Use</h2>
     <p>
-      CueFlow's core script library, import, preview, and floating caption features are designed to work without sending script content to us. Some system actions, such as opening a support email, opening legal pages, sharing an App Store link, checking subscription status with Adapty, restoring purchases, or using Apple services, may require a network connection handled by iOS or the destination service.
+      CueFlow's core script library, import, preview, dictation, voice follow, and floating caption features are designed to work without sending script content or microphone audio to us. Some system actions, such as opening a support email, opening legal pages, sharing an App Store link, checking subscription status with Adapty, restoring purchases, presenting Apple's App Tracking Transparency prompt, or using Apple services, may require a network connection handled by iOS or the destination service.
     </p>
 
-    <h2 id="s6"><span class="num">6.</span>Support Communications</h2>
+    <h2 id="s7"><span class="num">7.</span>Support Communications</h2>
     <p>
       If you contact us by email, we receive the information you choose to include in your message, such as your email address, device model, app version, iOS version, screenshots, and issue description. We use this information only to respond to the request and maintain support records.
     </p>
     <p>
-      Do not send private scripts or confidential video plans in a support email unless you want us to review that content as part of your request.
+      Do not send private scripts, voice recordings, or confidential video plans in a support email unless you want us to review that content as part of your request.
     </p>
 
-    <h2 id="s7"><span class="num">7.</span>Tracking and Advertising</h2>
+    <h2 id="s8"><span class="num">8.</span>Tracking and Advertising</h2>
     <p>
-      CueFlow does not show advertising, does not use the advertising identifier, and does not use your data to track you across apps or websites operated by other companies. CueFlow does not invoke App Tracking Transparency because tracking is not part of the app.
+      CueFlow does not show advertising and does not sell your personal information. CueFlow may present Apple's App Tracking Transparency prompt so subscription performance can be measured and CueFlow can be improved. Your data is not shared with third parties for their advertising.
+    </p>
+    <p>
+      You can allow or deny tracking. Denying tracking does not block script creation, import, preview, or subscribed floating captions. Apple and Adapty may still process identifiers required to validate App Store purchases and restore subscription access.
     </p>
 
-    <h2 id="s8"><span class="num">8.</span>App Store Privacy Label Mapping</h2>
+    <h2 id="s9"><span class="num">9.</span>App Store Privacy Label Mapping</h2>
     <div class="data-list">
       <section class="data-item">
-        <h3>Contact Info</h3>
-        <p class="data-status">No, unless you email support.</p>
-        <p class="data-note">Support email contains only what you choose to send.</p>
+        <h3>Audio Data</h3>
+        <p class="data-status">Processed on device for app functionality.</p>
+        <p class="data-note">Microphone audio is used only for voice follow and dictation through Apple speech APIs. CueFlow does not upload this audio to Omniform Labs servers.</p>
       </section>
       <section class="data-item">
         <h3>User Content</h3>
         <p class="data-status">Stored locally.</p>
-        <p class="data-note">Scripts and imported readable text stay on device unless you share them yourself.</p>
+        <p class="data-note">Scripts, imported readable text, and optional dictated text stay on device unless you share them yourself.</p>
+      </section>
+      <section class="data-item">
+        <h3>Contact Info</h3>
+        <p class="data-status">No, unless you email support.</p>
+        <p class="data-note">Support email contains only what you choose to send.</p>
       </section>
       <section class="data-item">
         <h3>Files and Documents</h3>
@@ -135,17 +163,17 @@
       </section>
       <section class="data-item">
         <h3>Identifiers</h3>
-        <p class="data-status">Subscription service only.</p>
-        <p class="data-note">Adapty and Apple may process identifiers needed to validate purchases and restore subscription access. CueFlow does not use advertising identifiers.</p>
+        <p class="data-status">Subscription service, and tracking only if you allow it.</p>
+        <p class="data-note">Adapty and Apple may process identifiers needed to validate purchases and restore subscription access. If you allow tracking, identifiers may also be used to measure subscription performance. CueFlow does not use identifiers for third-party advertising.</p>
       </section>
       <section class="data-item">
         <h3>Purchases</h3>
         <p class="data-status">Processed by Apple and Adapty.</p>
-        <p class="data-note">Subscription status is used to unlock app features. Payments are handled by Apple.</p>
+        <p class="data-note">Subscription status is used to unlock Picture in Picture floating captions after the included free daily use. Payments are handled by Apple.</p>
       </section>
       <section class="data-item">
         <h3>Usage Data</h3>
-        <p class="data-status">No app analytics.</p>
+        <p class="data-status">No Omniform Labs analytics of your scripts.</p>
         <p class="data-note">CueFlow does not send script usage analytics to Omniform Labs servers.</p>
       </section>
       <section class="data-item">
@@ -155,19 +183,19 @@
       </section>
     </div>
 
-    <h2 id="s9"><span class="num">9.</span>Children's Privacy</h2>
+    <h2 id="s10"><span class="num">10.</span>Children's Privacy</h2>
     <p>
       CueFlow is intended as a general productivity and creator utility. We do not knowingly collect personal information from children. If you believe a child has sent personal information through a support request, contact us so we can delete it.
     </p>
 
-    <h2 id="s10"><span class="num">10.</span>Security</h2>
+    <h2 id="s11"><span class="num">11.</span>Security</h2>
     <p>
       Script data is stored inside the app's local container and protected by iOS device security features. You are responsible for protecting your device passcode, iCloud backups, and any screenshots or videos you create outside CueFlow.
     </p>
 
-    <h2 id="s11"><span class="num">11.</span>Changes and Contact</h2>
+    <h2 id="s12"><span class="num">12.</span>Changes and Contact</h2>
     <p>
-      We may update this Privacy Policy when CueFlow changes or when legal requirements change. Material updates will be reflected with a revised date at the top of this page.
+      We may update this Privacy Policy when CueFlow changes or when legal requirements change. Material updates will be reflected with a revised date at the top of this page. This September 30, 2026 version updates the policy for microphone access, speech recognition, voice-following captions, and App Tracking Transparency.
     </p>
     <p>
       Questions about this policy can be sent to: <a href="mailto:sakasholy111@gmail.com">sakasholy111@gmail.com</a>.
