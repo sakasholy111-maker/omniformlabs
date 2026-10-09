@@ -3,61 +3,232 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support — JobWeek</title>
-  <meta name="description" content="JobWeek Support. Contact, subscriptions, reminders, and calculators." />
+  <title>JobWeek Support</title>
+  <meta name="description" content="JobWeek Support. How the working week is kept on the device, and how each part of the app is used." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://sakasholy111-maker.github.io/omniformlabs/JobWeek/support.html" />
   <style>
-    :root { --ink: #1a1a1a; --muted: #4a5568; --rule: #e2e8f0; --brand: #645cdb; }
-    *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: #fff; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.7; }
-    a { color: var(--brand); }
-    .doc { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
-    h1 { margin: 0 0 4px; font-size: 32px; }
-    .meta { margin: 0 0 48px; font-size: 14px; color: var(--muted); }
-    h2 { margin: 48px 0 12px; font-size: 20px; }
-    h2 .num { color: var(--brand); margin-right: 6px; }
-    h3 { margin: 24px 0 8px; font-size: 16px; }
-    .contact-line { margin: 14px 0; padding: 14px 16px; border: 1px solid var(--rule); }
-    ul { padding-left: 22px; }
-    .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); display: flex; justify-content: space-between; gap: 16px; }
-    .footer a { color: var(--muted); }
+    :root {
+      --ink: #1d1d1f;
+      --muted: #6e6e73;
+      --line: #d2d2d7;
+      --paper: #f5f5f7;
+      --white: #fff;
+      --link: #0066cc;
+      --max: 1060px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.47;
+      letter-spacing: -0.01em;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bar {
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      height: 52px;
+      padding: 0 28px;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .mark { color: var(--ink); font-size: 17px; font-weight: 600; letter-spacing: -0.02em; }
+    .bar nav { display: flex; gap: 18px; overflow-x: auto; font-size: 12px; }
+    .bar nav a { color: var(--ink); white-space: nowrap; }
+    .hero { background: var(--paper); padding: 72px 28px 28px; text-align: center; }
+    .eyebrow { margin: 0 0 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); }
+    h1 { margin: 0 auto 16px; max-width: 16ch; font-size: 56px; line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }
+    .lede { margin: 0 auto; max-width: 40em; font-size: 21px; line-height: 1.4; color: var(--muted); }
+    .hero figure { margin: 40px auto 0; max-width: 420px; }
+    .hero img, .shot { width: 100%; height: auto; border-radius: 28px; display: block; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 72px 28px; }
+    .band { background: var(--paper); }
+    h2 { margin: 0 0 12px; font-size: 40px; line-height: 1.1; font-weight: 600; letter-spacing: -0.025em; }
+    h3 { margin: 28px 0 8px; font-size: 21px; font-weight: 600; letter-spacing: -0.02em; }
+    p { margin: 0 0 14px; }
+    .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: start; }
+    .split.reverse { grid-template-columns: 0.85fr 1.15fr; }
+    .split.reverse .copy { order: 2; }
+    .shot { max-height: 640px; object-fit: cover; object-position: top; background: var(--paper); }
+    ul { margin: 0 0 14px; padding-left: 1.2em; }
+    li { margin: 6px 0; }
+    .note { color: var(--muted); font-size: 15px; }
+    @media (max-width: 800px) {
+      h1 { font-size: 40px; }
+      h2 { font-size: 32px; }
+      .split, .split.reverse { grid-template-columns: 1fr; }
+      .split.reverse .copy { order: 0; }
+      .bar nav { display: none; }
+    }
   </style>
 </head>
 <body>
-  <main class="doc">
-    <h1>Support</h1>
-    <p class="meta">Last updated: October 8, 2026 · Provided by Omniform Labs.</p>
+  <header class="bar">
+    <a class="mark" href="#overview">JobWeek</a>
+    <nav>
+      <a href="#purpose">Purpose</a>
+      <a href="#health">Health</a>
+      <a href="#home">Home</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#pay">Pay</a>
+      <a href="#bills">Bills</a>
+      <a href="#reports">Reports</a>
+      <a href="#calculators">Calculators</a>
+      <a href="#reminders">Reminders</a>
+      <a href="#plans">Plans</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <h2 id="s1"><span class="num">1.</span>About</h2>
-    <p>JobWeek is built and supported by Omniform Labs. We aim to answer within <strong>three business days</strong>.</p>
+  <section class="hero" id="overview">
+    <p class="eyebrow">SUPPORT</p>
+    <h1>The working week, kept on the device.</h1>
+    <p class="lede">JobWeek is a local planner published by Omniform Labs. It is intended to help a person keep work and the rest of the day in one view. Shifts, pay, tips, bills, and notes stay on the device. There is no account, and that record is not sent to Omniform Labs.</p>
+    <figure>
+      <img src="media/hero.jpg" alt="The JobWeek home card, with a countdown for the shift that is under way." />
+    </figure>
+  </section>
 
-    <h2 id="s2"><span class="num">2.</span>Contact</h2>
-    <div class="contact-line"><strong>Email:</strong> <a href="mailto:sakasholy111@gmail.com">sakasholy111@gmail.com</a></div>
-    <p>For privacy requests, write <em>Privacy Request</em> in the subject line.</p>
+  <section class="wrap" id="purpose">
+    <h2>A managed day, before any other feature.</h2>
+    <p>The product begins with the week a person is already living. Work has a start, an end, and a rate. The hours around that work have meals, errands, and bills. JobWeek is designed so those two parts of the day can be read together, without a spreadsheet and without a second application for the ordinary sums that follow a shift.</p>
+    <p>The home card is the first surface, and it is available before a subscription. It names the day. When a shift is close, or already going, the card follows that moment and shows the minutes that remain. The words are chosen from a fixed library. They change with the hour, the part of the day, and the weekend. They are written to be calm. They do not urge.</p>
+    <p>Only after that purpose is the rest of the app arranged: the calendar, the record of pay, the bills, the report, and the calculators. Each one is a way of looking at the same week.</p>
+  </section>
 
-    <h2 id="s3"><span class="num">3.</span>What to Include</h2>
-    <ul>
-      <li>Device model and iOS version.</li>
-      <li>JobWeek version from the App Store.</li>
-      <li>Whether you were on the home card, calendar, money, a calculator, or Settings.</li>
-      <li>What you expected, and the steps that led there.</li>
-    </ul>
-    <p>Please avoid sending pay amounts unless you want us to see them for the request.</p>
+  <section class="wrap band" id="health">
+    <h2>Work still belongs to a body.</h2>
+    <p>A long shift is not only a line on a calendar. JobWeek treats rest, movement, and water as part of planning the week. The Sleep, Pace, and water calculators turn numbers a person types into everyday estimates: a bedtime, a pace, a number of glasses.</p>
+    <p>These results are estimates for planning. They are not a diagnosis, a training plan, or medical advice. They do not replace a qualified clinician. The home card uses the same restraint. A reminder may name a shift and a time. It does not instruct a person to hurry.</p>
+  </section>
 
-    <h2 id="s4"><span class="num">4.</span>Common Topics</h2>
-    <h3>The Home Line Did Not Change</h3>
-    <p>Lines are chosen from a fixed library by the time of day. A new six-minute slice, a new hour, the weekend, or a shift that is about to start will select a different line. Opening the app twice in the same few minutes can show the same line on purpose, so the card does not flicker.</p>
-    <h3>Plans or Restore</h3>
-    <p>View Plans and Restore are in Settings. Purchases use the Apple ID on the device. If Restore says nothing was found, the subscription is not active on that Apple ID. The paywall itself is provided by Adapty and appears after launch and when a premium feature is opened.</p>
-    <h3>A Shift Stays on the Calendar</h3>
-    <p>Done marks the shift with a green line. Skip marks it with a gray line. Open it again to read the details. Past days that are still scheduled are not editable.</p>
-    <h3>Notifications</h3>
-    <p>Reminders are local. Allow notifications in iOS Settings if the 60-minute and 10-minute alerts do not appear. They include the shift name and time, not the pay.</p>
-
-    <div class="footer">
-      <span>Omniform Labs</span>
+  <section class="wrap" id="home">
+    <div class="split">
+      <div class="copy">
+        <h2>The home card.</h2>
+        <p>The home screen holds the date, the reminder, four entrances, and the calculators. The reminder is a stored line, not a message composed from private notes. Leave the app and return in a later part of the hour, and the line can change. Opening it twice in the same few minutes can show the same line, so the card does not flicker.</p>
+        <p>When a shift is under way, a ring shows the minutes left. That countdown is the feature the rest of the week is built around: the person can see the end of the shift without opening a schedule.</p>
+        <p>Swipe up to bring the full set of calculators to the top. Swipe down to return to the complete home. The four entrances are Work Calendar, Reports, Income, and Expenses.</p>
+      </div>
+      <img class="shot" src="media/home.jpg" alt="JobWeek home, with the date, the reminder card, and the four entrances." />
     </div>
-  </main>
+  </section>
+
+  <section class="wrap band" id="calendar">
+    <div class="split reverse">
+      <div class="copy">
+        <h2>The calendar.</h2>
+        <p>The calendar opens at the current month and continues forward. Each job may have one shift on a day. A weekly pattern sets the days, the hours, the break, and the hourly rate. A single day can be adjusted without rewriting the pattern.</p>
+        <p>Today can be marked Done or Skip. Done leaves a green mark. Skip leaves a gray mark. Either mark can be opened again and read as a record. A day that has already passed, and is still only scheduled, can be viewed. It is not edited. A future day can be saved or skipped before it arrives.</p>
+        <p>The tip field appears only when the day is today and the shift has already started.</p>
+      </div>
+      <img class="shot" src="media/calendar.jpg" alt="The October calendar, with Harbor Cafe and Riverside Bar marked on their days." />
+    </div>
+  </section>
+
+  <section class="wrap" id="shift">
+    <div class="split">
+      <div class="copy">
+        <h2>A shift, opened.</h2>
+        <p>Opening a day shows the job, the start, the end, and the hourly rate. A completed shift also shows the tip that was entered. The screen is a record of that day. It is not a second calendar.</p>
+        <p>Sample names in the illustrations on this page, such as Harbor Cafe, are examples. A new installation starts empty. The same screens appear after a schedule has been added.</p>
+      </div>
+      <img class="shot" src="media/shift.jpg" alt="A completed Harbor Cafe shift, with the hourly rate and the tip." />
+    </div>
+  </section>
+
+  <section class="wrap band" id="pay">
+    <div class="split reverse">
+      <div class="copy">
+        <h2>Pay and tips.</h2>
+        <p>Income for the month is the sum of wages and tips. The two are kept apart, so the week’s pay is not one undifferentiated number. Each completed shift contributes its wage. A tip entered on that shift is listed on its own line.</p>
+        <p>A person may also add an income record by hand. Deleting a hand-entered record removes that line. It does not rewrite a completed shift unless that shift’s own record is the one being changed.</p>
+      </div>
+      <img class="shot" src="media/income.jpg" alt="Monthly income, separated into wages and tips, and listed by job." />
+    </div>
+  </section>
+
+  <section class="wrap" id="bills">
+    <div class="split">
+      <div class="copy">
+        <h2>Bills and spending.</h2>
+        <p>Expenses are the amounts already spent, and the bills that are still open. A bill has one name, one amount, and one due date. It can be marked paid. Spending can be added under a category such as food or transport.</p>
+        <p>The page states what has been spent this month and what remains open. It does not forecast a budget beyond the records that have been entered.</p>
+      </div>
+      <img class="shot" src="media/expenses.jpg" alt="Spent this month, with rent, electric, and phone, and the spending recorded under them." />
+    </div>
+  </section>
+
+  <section class="wrap band" id="reports">
+    <div class="split reverse">
+      <div class="copy">
+        <h2>The month, read once.</h2>
+        <p>Reports gather the month: income, tips, hours, the amount per completed shift, expenses, and the difference between income and expenses. A bar separates wages from tips. Each job is listed with its hours.</p>
+        <p>The figures are sums of the records on the device. They are not tax, payroll, or financial advice.</p>
+      </div>
+      <img class="shot" src="media/reports.jpg" alt="The October report, with income, tips, hours, expenses, and cash flow." />
+    </div>
+  </section>
+
+  <section class="wrap" id="calculators">
+    <div class="split">
+      <div class="copy">
+        <h2>Calculators. The rate is typed.</h2>
+        <p>The calculators are available with the home card, before a subscription. They cover a tip, a wage, hours, overtime, a split, sales tax, a discount, mileage, fuel, and the estimates for sleep, pace, and water, among others.</p>
+        <p>A rate is typed. It is not chosen from a fixed chip, and the app does not assume an official yearly mileage rate. A result stays on the screen. Calculators do not write an income or expense record.</p>
+        <p>Hours are the clock span minus an unpaid break. Overtime uses the cutoff and the multiplier that are typed, because a workplace rule is not the same in every place. The note on each calculator states the estimate it is making.</p>
+      </div>
+      <img class="shot" src="media/tip.jpg" alt="The tip calculator, with a typed percent and the resulting tip." />
+    </div>
+  </section>
+
+  <section class="wrap band" id="reminders">
+    <div class="split reverse">
+      <div class="copy">
+        <h2>Reminders and vibration.</h2>
+        <p>Two local reminders can be scheduled for a shift: sixty minutes before it starts, and ten minutes before. The notification may include the shift name and the start time. It does not include an amount.</p>
+        <p>Reminders and vibration are separate controls in Settings. Vibration, when allowed, runs for about one minute, whether the screen is on or off. Opening JobWeek stops the vibration and the notification behavior that is under way. The purpose is to bring the person into the app. Later reminders are not cancelled by that visit.</p>
+        <p>Both controls ask for notification permission, because a vibration while the screen is off uses a notification sound. If permission is denied, the control returns to off.</p>
+      </div>
+      <img class="shot" src="media/hours.jpg" alt="The hours calculator, with a start, an end, and an hourly rate that was typed." />
+    </div>
+  </section>
+
+  <section class="wrap" id="plans">
+    <h2>What is included before a plan.</h2>
+    <p>The home reminder and the everyday calculators are available without a subscription. JobWeek Premium unlocks the work calendar, income, expenses, and reports. The paywall is not presented at launch. It is presented when one of those four features is opened, and from Settings, under View Plans. Restore is in Settings and uses the Apple ID on the device.</p>
+    <p>Plans are weekly, monthly, semiannual, and annual. The weekly plan may include a three-day free trial. The monthly plan may include an introductory price for the first month. The price, and any trial, is shown by Apple for the storefront before confirmation. In one subscription group, an Apple ID can use one introductory offer. After that offer has been used, the other plan is offered at its regular price.</p>
+    <p>JobWeek does not provide tax, legal, payroll, or financial advice. Calculator results are estimates.</p>
+  </section>
+
+  <section class="wrap" id="contact">
+    <h2>Writing to support.</h2>
+    <p>JobWeek is supported by Omniform Labs. We aim to answer within three business days.</p>
+    <p><a href="mailto:sakasholy111@gmail.com">sakasholy111@gmail.com</a></p>
+    <p>For a privacy request, write Privacy Request in the subject line. Please do not send pay amounts unless they are needed for the request.</p>
+    <h3>What to include</h3>
+    <ul>
+      <li>The device model and the version of iOS.</li>
+      <li>The JobWeek version, as shown on the App Store.</li>
+      <li>Whether the question concerns the home card, the calendar, pay, a bill, a calculator, a reminder, or Settings.</li>
+      <li>What was expected, and the steps that led there.</li>
+    </ul>
+    <h3>If a reminder does not appear</h3>
+    <p>Reminders are local. Allow notifications for JobWeek in Settings if the sixty-minute and ten-minute alerts do not appear. They include a shift name and a time. They do not include an amount. Vibration uses the same permission when the screen is off.</p>
+    <h3>If Restore finds nothing</h3>
+    <p>Restore looks for a subscription on the Apple ID that is signed in on the device. If none is active on that Apple ID, Restore reports that nothing was found. View Plans, in Settings, presents the current plans for that storefront.</p>
+    <p class="note">Last updated October 9, 2026. Provided by Omniform Labs.</p>
+  </section>
 </body>
 </html>
